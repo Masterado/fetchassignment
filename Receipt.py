@@ -51,6 +51,7 @@ class Receipt(object):
         self._items = None
         self._total = None
         self.discriminator = None
+        self.id = None
         self.retailer = retailer
         self.purchase_date = purchase_date
         self.purchase_time = purchase_time
@@ -225,3 +226,18 @@ class Receipt(object):
     def __ne__(self, other):
         """Returns true if both objects are not equal"""
         return not self == other
+        
+    def process(self):
+        chars=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+        rand=random.choices(chars,k=32)
+        r=''.join(rand)
+        self.id = r[:8] + "-" + r[8:12] + "-" + r[12:16] + "-" + r[16:20] + "-" + r[20:]
+
+def name_len(self):
+def round_dollar(self):
+def total_multiple(self):
+def two_items(self):
+def item_len(self):
+def llm(self):
+def odd_day(self):
+def time_check(self):
