@@ -232,12 +232,33 @@ class Receipt(object):
         rand=random.choices(chars,k=32)
         r=''.join(rand)
         self.id = r[:8] + "-" + r[8:12] + "-" + r[12:16] + "-" + r[16:20] + "-" + r[20:]
+        return self.id
 
 def name_len(self):
+    i=0
+    count=0
+    while (i <len(self._retailer)):
+        if(self._retailer[i].isalnum()):
+            count+=1
+        i+=1
+    return count
+        
 def round_dollar(self):
+    flt=float(self.total)
+    if(flt-int(flt)==0):
+        return 50
 def total_multiple(self):
+    ft=float(self.total)
+    if(flt%0.25==0.0):
+        return 25
+    
 def two_items(self):
+    pairs=int(len(self._items)/2)
+    return 5*pairs
+    
 def item_len(self):
+
+    
 def llm(self):
 def odd_day(self):
 def time_check(self):
